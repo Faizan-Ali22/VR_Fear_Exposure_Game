@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 3
   tags:
   - Anchor
+  - NarrowPath
+  - Platform
+  - GlassBridge
+  - SafeZone
   layers:
   - Default
   - TransparentFX
