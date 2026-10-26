@@ -1,0 +1,770 @@
+fileFormatVersion: 2
+guid: e01e433ba12dc33418c8e47db1aa29e4
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_BlackPlastic
+    second: {fileID: 2100000, guid: 3afb25201ccb4f944bf194b71f8d9f52, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_BoardConcrete
+    second: {fileID: 2100000, guid: 32d56b6236a9ee347a07a1d2f9589ff8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_BoardConcrete.001
+    second: {fileID: 2100000, guid: 7a52ccec4b28a6947bc8364c255e1264, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Bronze
+    second: {fileID: 2100000, guid: 0feb62e1911e1ae46897e8800a72f41b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Bronze.001
+    second: {fileID: 2100000, guid: 88a70bf0f5b51d448997479111e1f610, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_BrushedSteel
+    second: {fileID: 2100000, guid: 97e76818d96df4548a155c60cf504687, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_BrushedSteel.001
+    second: {fileID: 2100000, guid: 1527e89afabb24d4ca727309dc496ac3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Cable
+    second: {fileID: 2100000, guid: 0da018af799af2442aa54b5792bdef1d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_CarPalette
+    second: {fileID: 2100000, guid: 9e328578494e2a94c8b89bf77e708b2c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Concrete
+    second: {fileID: 2100000, guid: fec7ee644b290c243892df04b16defa4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Concrete.001
+    second: {fileID: 2100000, guid: c72c6d0cd5a48764d90091454e4510d0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_ConcreteWall
+    second: {fileID: 2100000, guid: 313b3f4548dab7a4e906b5fd7374e6bf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_ElevatorWall
+    second: {fileID: 2100000, guid: 95acd68503209d04ca2b3bfa958e3801, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Facade_Blue
+    second: {fileID: 2100000, guid: ecbb094b5f9692a4abc2e457ae50e92c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Facade_Brutal
+    second: {fileID: 2100000, guid: eb8b9b214cd38b34e9dbece586c36c2c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Facade_Concrete
+    second: {fileID: 2100000, guid: 2f059031ba958714297413c659405127, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Facade_Dark
+    second: {fileID: 2100000, guid: cea17e17f1fb2ea47945963d3a70bdea, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Facade_Office
+    second: {fileID: 2100000, guid: 91d0032279889bd468db49a59f1e234b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Facade_Teal
+    second: {fileID: 2100000, guid: 0c2289532d4f8d4449f986e033202faa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_FloorSign_25
+    second: {fileID: 2100000, guid: 6df961be5dc27f544bd648f5cfdaae3c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_FloorSign_50
+    second: {fileID: 2100000, guid: 3f6f8c577df23b340b75f9450cd5f208, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_FloorSign_75
+    second: {fileID: 2100000, guid: a077e48cde391d346888fdf879c80811, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_FloorSign_G
+    second: {fileID: 2100000, guid: f7b18839eb56f1c47b635e61ed0c095b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Foliage
+    second: {fileID: 2100000, guid: 41feea92caf7de349bcdfee7669bb8a8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Foliage.001
+    second: {fileID: 2100000, guid: 012e9aa5bb9250e48ba0743c93915b55, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Frame_DarkSteel
+    second: {fileID: 2100000, guid: e64a0f538cc984845b5e47a5d498012a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Galvanized
+    second: {fileID: 2100000, guid: 6fd5e208a1e30af49a6605347d7bbf0b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Galvanized.001
+    second: {fileID: 2100000, guid: d6000522305f04e4e9f090caa5a588fe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Glass_Clear
+    second: {fileID: 2100000, guid: ad65c314fae65a44eb151eb046bf41d7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Glass_Wired
+    second: {fileID: 2100000, guid: 3cb24038f44a98948a40fee4717c0253, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Grass
+    second: {fileID: 2100000, guid: 221cd841819776c46b3a618e90f778a9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Grating
+    second: {fileID: 2100000, guid: c3515344f4d88a3418460dd9ec794e5a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Grating.001
+    second: {fileID: 2100000, guid: 87fc1a3b0d1f6ec4eb00830847484b01, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Hazard
+    second: {fileID: 2100000, guid: 6a6d65e6a0c10824a8c39761c185825b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_LiftPanel
+    second: {fileID: 2100000, guid: 529a40a651b9712459f46daded3a29b5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Light_Cool
+    second: {fileID: 2100000, guid: 827b66e2ed788fb4585971985a087450, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Light_Red
+    second: {fileID: 2100000, guid: 4d7f05be8be38a7419f6a4f1e885ef8f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Light_Warm
+    second: {fileID: 2100000, guid: 97b914a152a8b424ea78027396a52c88, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Light_WarmPanel
+    second: {fileID: 2100000, guid: 75cf93e086a895c4b91b4fc4a41ee76e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Metal_Cabinet
+    second: {fileID: 2100000, guid: 08a82d0c7d40f4d4fa824b41a38dee28, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Metal_Door
+    second: {fileID: 2100000, guid: e3cdc36c8ed290e4cbfab0451255db2f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Metal_HVAC
+    second: {fileID: 2100000, guid: c0268320acace5d4ba19583fab4e6350, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_PaintWhite
+    second: {fileID: 2100000, guid: 89b565286ce0b8c4c8f19ef1f1580a18, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Pavers
+    second: {fileID: 2100000, guid: 69ae5def6355ca94cb14e68c232a8ee5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Pipe_Green
+    second: {fileID: 2100000, guid: 894933fde4c5be642a375804ab8fa7ad, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Pipe_Insulation
+    second: {fileID: 2100000, guid: 788349ba2660438408a4e0963a875445, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Pipe_Red
+    second: {fileID: 2100000, guid: b4678ce805aa665438976d9800c054b8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Pipe_Yellow
+    second: {fileID: 2100000, guid: f7ac93329668e0044978c2dc9b120110, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_PolishedConcrete
+    second: {fileID: 2100000, guid: 4570f488d7040654d825ff4fbb42c7df, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_RoofGravel
+    second: {fileID: 2100000, guid: dbee37af259ac1a4ab80cd21fd9f0eda, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_RoofGravel.001
+    second: {fileID: 2100000, guid: 6a02919ba1d3c494699051a4cd5ddc48, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Roofing
+    second: {fileID: 2100000, guid: ff0ff484598ed2d458b76c469b0260cc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Rubber
+    second: {fileID: 2100000, guid: dee653cb56bf5c84d8ea902b7b5e1a58, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_RustPaint
+    second: {fileID: 2100000, guid: edc885378526dc74a9cd72eb026d1fab, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_RustPaint.001
+    second: {fileID: 2100000, guid: ea4d102aef22fcc4e99ba6cc5f2e368b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Sign_Caution
+    second: {fileID: 2100000, guid: c76bb5808bbdccd43bf9ebfacee9fcd3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Sign_Danger
+    second: {fileID: 2100000, guid: 4ab887263622cb8498c54574f64f5446, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Sign_LiftGuide
+    second: {fileID: 2100000, guid: 2e5e5e0dbace46347bee0d5ffc028153, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Sign_LobbyDirectory
+    second: {fileID: 2100000, guid: 64fa7a659d3037d499a1b376c6492bdd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Sign_Roof
+    second: {fileID: 2100000, guid: 4ab7ff4621ca71349a3c9e19e8caee67, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_SteelBeam
+    second: {fileID: 2100000, guid: d2ae08f0723e85347b0fd71864451a80, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_SteelBeam.001
+    second: {fileID: 2100000, guid: e13a4f95719db924fb395321e0b43fbf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Tarp_Blue
+    second: {fileID: 2100000, guid: 3386079c171a3234d8c355059ce6cc95, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_TreadPlate
+    second: {fileID: 2100000, guid: 88658da58a4b05046990f1efb4acb6e9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Water
+    second: {fileID: 2100000, guid: 78f34d7d705b2d64581058245ad9996c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_WoodWeathered
+    second: {fileID: 2100000, guid: 8aa2e187bda5bd54e8099f8bc27e60df, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_WoodWeathered.001
+    second: {fileID: 2100000, guid: 092d7fcebac50a146bcc6899879d2571, type: 2}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 804e1ce4c496647cfa3f1a1134187c71, type: 3}
+  _removeEmptyRootObjects: 1
+  _scaleFactor: 1
+  _deduplicateResources: 0
+  _deduplicatedStatistics:
+    meshCountBefore: 0
+    meshCountAfter: 0
+    textureCountBefore: 0
+    textureCountAfter: 0
+  _maximumLod: 300
+  _readWriteEnabled: 1
+  _generateColliders: 0
+  _addColliders: 0
+  _swapUvs: 0
+  _generateLightmapUVs: 0
+  _importBlendShapeNames: 1
+  _blendShapeFrameWeight:
+    _option: 0
+    _multiplier: 1
+  _importNormals: 0
+  _importTangents: 0
+  _importCamera: 2
+  _importAnimations: 2
+  _mecanimHumanoidFlip: 0
+  _mecanimHumanoidClips: 0
+  _nonHumanoidRootNodeName: 
+  _addAnimatorComponent: 0
+  _animationLoopTime: 1
+  _animationLoopPose: 0
+  _animationLoopSettingsPerClip: 0
+  _importMaterials: 1
+  _enableGpuInstancing: 1
+  _texturesReadWriteEnabled: 1
+  _generateMipMaps: 1
+  _useSceneNameIdentifier: 1
+  _textureCompression: -50
+  _gltfAsset: '<b>Generator: </b>Khronos glTF Blender I/O v5.1.20
+
+    <b>Version:
+    </b>2.0
+
+    
+
+    <b>Extras: </b>
+
+'
+  optimizeGameObjects: 0
+  materials:
+  - {fileID: 98815890105002644, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: -5275936995132377665, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: 9213439924298057643, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: 2373009465509349639, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: 4596771878150014853, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: -3506077723682170604, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: -7293491131178661147, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: -1433399297041910533, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: -3729997008199361533, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: -6986667029758877565, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: -3393137362140880085, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: 5600553248840937595, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: 8777659369509941401, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: 8880284803895113535, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: -7153232484759551492, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: -1258882647189568838, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: 8505464002804583911, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: 4536803566003868964, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: -2570419083409178469, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: -5536931728363010111, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: 2718677002348450948, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: -6241372104247909498, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: -6344330932388016463, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: 7952071557272123745, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: 7285363691235436847, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: 276497888815779935, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: 9192720290702136175, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: -5099126118370711819, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: -6342030815416393097, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: 7042695012136415000, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: -5029353031374390818, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: 537939518281832291, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: 1352669829877145343, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: 120763559975541446, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: 5402560941876366882, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: 2760636002517290982, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: 381943469007456905, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: -8205348734795800570, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: 6432127780249750521, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: 6497781025723334282, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: 3319953965428283034, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: -902645164011525742, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: 6343294872652987659, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: 8143773132480654787, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: -7854921601249306425, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: 2778170093945826321, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: 1749710808161914216, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: -5254250186546926749, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: -6253054233957258504, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: -4536759194310007153, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: -3786930350399889009, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: 5110690775328807540, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: 3154866903244658214, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: -2151720032597907106, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: -1909508969102756242, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: 269633459526419437, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: -2601529340483381085, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: -3536669193934295486, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: 1917060964875332066, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: -768546721821614591, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: -8680083015955297928, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: 1771129582327373161, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: 6612714421793020304, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: -601248175521645558, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: 3613778917696026699, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: 27573199096983903, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: -4073732498522673219, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  textures:
+  - {fileID: 824803434538167155, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: -3915119959915498979, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: -4828302127821209146, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: -7588655213999807753, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: 396406411701338866, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: 7916410564449783662, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: 7300240515542758453, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: 2497389037537106966, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: -8128324091986379090, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: -7016418452534000628, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: -7813740848138992722, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: 3927311110743628996, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: -6769871833173611412, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: -38379508727044549, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: 3549988349083019212, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: -4591175142553177176, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: -2212876299034173716, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: 9128980752397694009, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: 4922700879287718623, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: -2819868003840343528, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: 4054835576439821361, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: -4688656818128116908, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: -731940749557968554, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: 462133224450835013, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: -3458127914805455491, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: -1609548209862507762, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: 4827914726326276424, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: -2863176887122168295, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: -6929950462837085898, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: -1713366343353051734, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: 2381224534298643995, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: -5258058729796577111, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: -5994292399879601429, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: -7519864532718013653, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: -6933094666455011363, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: 4738670658248051536, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: 186498765162357305, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: 407088435602955418, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: 8509358872016214309, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: 3567440759827794159, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: 4075503611268926165, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: -7988741877448929737, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: 436517465485163229, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: 1396841563926266918, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: 8732411541580547025, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: 6211378137612241633, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: -4035383346228177574, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: -3418879703057941745, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: 282955629602153613, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: -2272322767997499405, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: -8547526156389788408, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: 1831006154765025574, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: 4788062699397747895, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: -6937286190388254316, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: -2767085478751175466, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: 4541352994471191822, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: -3454545095883450892, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: -6733783707544587461, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: 444250947786437289, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  - {fileID: 1384050685021947208, guid: e01e433ba12dc33418c8e47db1aa29e4, type: 3}
+  hasSceneData: 1
+  hasAnimationData: 0
+  hasMaterialData: 1
+  hasTextureData: 1
+  animations: []
+  _extensions:
+  - name: KHR_materials_emissive_strength
+    supported: 1
+    used: 1
+    required: 0
+  _textures:
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  _mainAssetIdentifier: scenes/Scene
+  _importPlugins: []
