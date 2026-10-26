@@ -36,6 +36,8 @@ TagManager:
   - SamplesInfoPanel
   - QDSUIToggleCheckboxRadio
   - QDSUIToggleThumbnail
+  - Fire
+  - Meteor
   layers:
   - Default
   - TransparentFX

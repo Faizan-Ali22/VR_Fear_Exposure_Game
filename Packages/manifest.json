@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "com.meta.movement": "file:D:/Unity/VR/Assets/Unity-Movement-71.0.1/Unity-Movement-71.0.1",
     "com.meta.xr.sdk.all": "205.0.0",
     "com.meta.xr.sdk.core": "205.0.0",
     "com.unity.collab-proxy": "2.13.6",

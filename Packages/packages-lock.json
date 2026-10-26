@@ -7,19 +7,6 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
-    "com.meta.movement": {
-      "version": "file:D:/Unity/VR/Assets/Unity-Movement-71.0.1/Unity-Movement-71.0.1",
-      "depth": 0,
-      "source": "local",
-      "dependencies": {
-        "com.meta.xr.sdk.core": "71.0.0",
-        "com.meta.xr.sdk.interaction": "71.0.0",
-        "com.meta.xr.sdk.interaction.ovr": "71.0.0",
-        "com.unity.textmeshpro": "3.0.6",
-        "com.unity.animation.rigging": "1.2.1",
-        "com.unity.burst": "1.4.1"
-      }
-    },
     "com.meta.xr.mrutilitykit": {
       "version": "205.0.0",
       "depth": 1,
@@ -138,7 +125,7 @@
     },
     "com.unity.burst": {
       "version": "1.8.29",
-      "depth": 1,
+      "depth": 2,
       "source": "registry",
       "dependencies": {
         "com.unity.mathematics": "1.2.1",
@@ -402,7 +389,7 @@
     },
     "com.unity.textmeshpro": {
       "version": "5.0.0",
-      "depth": 1,
+      "depth": 2,
       "source": "builtin",
       "dependencies": {
         "com.unity.ugui": "2.0.0"
