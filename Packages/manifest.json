@@ -19,6 +19,7 @@
     "com.unity.xr.management": "4.6.0",
     "com.unity.xr.meta-openxr": "2.5.1",
     "com.unity.xr.openxr": "1.17.1",
+    "org.khronos.unitygltf": "file:D:/Unity/UnityGLTF-release-2.24.0/UnityGLTF-release-2.24.0",
     "com.unity.modules.accessibility": "1.0.0",
     "com.unity.modules.adaptiveperformance": "1.0.0",
     "com.unity.modules.ai": "1.0.0",

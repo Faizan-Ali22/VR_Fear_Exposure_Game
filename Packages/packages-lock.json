@@ -152,7 +152,7 @@
     },
     "com.unity.collections": {
       "version": "6.5.0",
-      "depth": 2,
+      "depth": 1,
       "source": "builtin",
       "dependencies": {
         "com.unity.burst": "1.8.25",
@@ -369,7 +369,7 @@
     },
     "com.unity.test-framework.performance": {
       "version": "3.5.0",
-      "depth": 3,
+      "depth": 2,
       "source": "registry",
       "dependencies": {
         "com.unity.test-framework": "1.1.33",
@@ -545,6 +545,20 @@
         "com.unity.xr.legacyinputhelpers": "2.1.2"
       },
       "url": "https://packages.unity.com"
+    },
+    "org.khronos.unitygltf": {
+      "version": "file:D:/Unity/UnityGLTF-release-2.24.0/UnityGLTF-release-2.24.0",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {
+        "com.unity.nuget.newtonsoft-json": "2.0.0",
+        "com.unity.modules.audio": "1.0.0",
+        "com.unity.modules.imageconversion": "1.0.0",
+        "com.unity.modules.particlesystem": "1.0.0",
+        "com.unity.shadergraph": "10.0.0",
+        "com.unity.mathematics": "1.0.0",
+        "com.unity.collections": "1.0.0"
+      }
     },
     "com.unity.modules.accessibility": {
       "version": "1.0.0",
