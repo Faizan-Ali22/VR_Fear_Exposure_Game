@@ -34,12 +34,20 @@ namespace FearExposure.Level1
         private bool _spotted;
         private bool _hinted;
         private float _lookPhaseStart;
+        private Color _beaconBaseColor = new Color(255f/255f, 220f/255f, 60f/255f, 160f/255f);
+        private Color _beaconGazedColor = new Color(80f/255f, 255f/255f, 150f/255f, 240f/255f);
 
         protected override void OnBegin()
         {
             _lookPhase = false;
             _spotted = false;
             _hinted = false;
+
+            // Automatically sync floor ring marker position with stand zone
+            if (windowMarker != null && standZone != null)
+            {
+                windowMarker.transform.position = standZone.transform.position;
+            }
 
             buildingTarget.ResetTarget();
             windowMarker.Show();
@@ -57,15 +65,32 @@ namespace FearExposure.Level1
             _lookPhaseStart = Time.time;
             Say(lookMessage);
             buildingBeacon.Show();
+            buildingBeacon.SetColor(_beaconBaseColor);
             buildingTarget.Arm();
         }
 
         private void Update()
         {
-            if (!IsRunning || !_lookPhase || _spotted || _hinted) return;
-            if (Time.time - _lookPhaseStart < hintAfterSeconds) return;
-            _hinted = true;
-            Say(hintMessage);
+            if (!IsRunning || !_lookPhase || _spotted) return;
+
+            // Visual feedback on beacon when player is locking gaze on it
+            if (buildingBeacon != null && buildingTarget != null)
+            {
+                if (buildingTarget.IsCurrentlyGazed)
+                {
+                    buildingBeacon.SetColor(_beaconGazedColor);
+                }
+                else
+                {
+                    buildingBeacon.SetColor(_beaconBaseColor);
+                }
+            }
+
+            if (!_hinted && Time.time - _lookPhaseStart >= hintAfterSeconds)
+            {
+                _hinted = true;
+                Say(hintMessage);
+            }
         }
 
         private void OnSpotted(LookTarget target)

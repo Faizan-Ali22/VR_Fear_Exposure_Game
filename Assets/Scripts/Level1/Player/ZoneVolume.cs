@@ -27,6 +27,8 @@ namespace FearExposure.Level1
         public event Action Exited;
 
         public bool PlayerInside { get; private set; }
+        public Vector3 Size => size;
+        public Vector3 Center => center;
 
         private float _nextCheck;
 

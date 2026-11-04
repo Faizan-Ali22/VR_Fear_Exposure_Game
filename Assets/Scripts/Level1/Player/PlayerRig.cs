@@ -36,6 +36,8 @@ namespace FearExposure.Level1
 
         public Transform RigRoot { get { return rigRoot; } }
         public Transform Head { get { return headCamera != null ? headCamera.transform : null; } }
+        public Transform LeftHand { get { return leftHand; } }
+        public Transform RightHand { get { return rightHand; } }
 
         /// <summary>True while a script (the elevator) has taken movement away from the player.</summary>
         public bool InputLocked { get; private set; }
@@ -79,7 +81,22 @@ namespace FearExposure.Level1
             if (rigRoot == null) rigRoot = transform;
             if (headCamera == null) headCamera = GetComponentInChildren<Camera>(true);
             if (characterController == null) characterController = GetComponent<CharacterController>();
+            if (leftHand == null)
+            {
+                var lc = transform.Find("Camera Offset/Left Controller");
+                if (lc != null) leftHand = lc;
+            }
+            if (rightHand == null)
+            {
+                var rc = transform.Find("Camera Offset/Right Controller");
+                if (rc != null) rightHand = rc;
+            }
             _originalParent = rigRoot.parent;
+
+            if (headCamera != null && headCamera.GetComponent<GazeReticle>() == null)
+            {
+                headCamera.gameObject.AddComponent<GazeReticle>();
+            }
         }
 
         private void OnDestroy()
@@ -127,9 +144,6 @@ namespace FearExposure.Level1
         /// </summary>
         public void PlaceFeetAt(Vector3 floorPoint, float yawDegrees)
         {
-            bool ccWasOn = characterController != null && characterController.enabled;
-            if (ccWasOn) characterController.enabled = false;
-
             Transform head = headCamera.transform;
             float delta = Mathf.DeltaAngle(HeadYaw, yawDegrees);
             rigRoot.RotateAround(head.position, Vector3.up, delta);
@@ -140,7 +154,6 @@ namespace FearExposure.Level1
                 floorPoint.y - rigRoot.position.y,
                 floorPoint.z - headPos.z);
 
-            if (ccWasOn) characterController.enabled = true;
             Physics.SyncTransforms();
         }
 

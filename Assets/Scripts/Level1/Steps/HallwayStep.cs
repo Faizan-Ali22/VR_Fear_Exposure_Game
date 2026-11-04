@@ -11,7 +11,7 @@ namespace FearExposure.Level1
     public class HallwayStep : LevelStep
     {
         [Header("Scene references")]
-        [Tooltip("The door between the room and the hallway.")]
+        [Tooltip("Optional door between the room and the hallway (leave empty for open layouts).")]
         [SerializeField] private SlidingDoor roomDoor;
         [Tooltip("Floor arrows from the room to the elevator.")]
         [SerializeField] private GuidePath floorGuide;
@@ -25,7 +25,7 @@ namespace FearExposure.Level1
         [SerializeField] private int courageReward = 5;
 
         [Header("Messages")]
-        [SerializeField, TextArea] private string doorMessage = "A door has opened. Follow the glowing arrows on the floor to find the elevator.";
+        [SerializeField, TextArea] private string doorMessage = "Follow the glowing arrows on the floor to find the elevator.";
         [SerializeField, TextArea] private string foundMessage = "You found the elevator. Press the small button beside the door.";
         [SerializeField, TextArea] private string openedMessage = "The elevator is here. Step inside when you are ready.";
 
@@ -37,13 +37,17 @@ namespace FearExposure.Level1
             _found = false;
             _pressed = false;
 
-            roomDoor.Open();
+            if (roomDoor != null) roomDoor.Open();
             floorGuide.Show();
-            callButton.SetInteractable(false);
+            if (callButton != null)
+            {
+                callButton.SetInteractable(true);
+                callButton.SetAttention(true);
+            }
             Say(doorMessage);
 
-            elevatorLobbyZone.Entered += OnLobbyEntered;
-            callButton.Pressed += OnCallPressed;
+            if (elevatorLobbyZone != null) elevatorLobbyZone.Entered += OnLobbyEntered;
+            if (callButton != null) callButton.Pressed += OnCallPressed;
         }
 
         private void OnLobbyEntered()
@@ -51,18 +55,25 @@ namespace FearExposure.Level1
             if (_found) return;
             _found = true;
             Say(foundMessage);
-            callButton.SetInteractable(true);
-            callButton.SetAttention(true);
+            if (callButton != null)
+            {
+                callButton.SetInteractable(true);
+                callButton.SetAttention(true);
+            }
         }
 
         private void OnCallPressed()
         {
-            if (!_found || _pressed) return;
+            if (_pressed) return;
             _pressed = true;
-            callButton.SetAttention(false);
-            callButton.SetInteractable(false);
+            _found = true;
+            if (callButton != null)
+            {
+                callButton.SetAttention(false);
+                callButton.SetInteractable(false);
+            }
             Award(courageReward, "Found the elevator");
-            elevator.OpenCabDoor();
+            if (elevator != null) elevator.OpenCabDoor();
             StartCoroutine(FinishWhenDoorOpen());
         }
 
@@ -98,7 +109,7 @@ namespace FearExposure.Level1
 
         public override void Validate(ValidationReport report)
         {
-            report.Require(roomDoor, "Room Door", this);
+            // RoomDoor is optional for open-concept layouts
             report.Require(floorGuide, "Floor Guide", this);
             report.Require(elevatorLobbyZone, "Elevator Lobby Zone", this);
             report.Require(callButton, "Call Button", this);

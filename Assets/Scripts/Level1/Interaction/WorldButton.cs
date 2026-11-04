@@ -1,14 +1,19 @@
 using System;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
+using UnityEngine.XR.Interaction.Toolkit.Filtering;
 
 namespace FearExposure.Level1
 {
     /// <summary>
     /// A pressable 3D button (elevator call button, floor buttons, duration buttons).
-    /// Built on XR Simple Interactable: point a controller ray at it (or reach out with a hand)
-    /// and SQUEEZE THE GRIP (XR Device Simulator: hold G). The object also needs a Collider.
+    /// Supports multi-modal activation:
+    ///   1. Poking (XR Poke Interactor / XRPokeFilter as in Lab Manual 9).
+    ///   2. Direct physical hand slamming or touching (triggers, collisions, proximity).
+    ///   3. Grabbing / Select (Grip button / G key).
+    ///   4. Point & Click / Activate (Trigger button / Left Click in simulator).
     /// Steps switch buttons on and off with SetInteractable().
     /// </summary>
     [RequireComponent(typeof(XRSimpleInteractable))]
@@ -32,12 +37,17 @@ namespace FearExposure.Level1
         [SerializeField] private AudioSource audioSource;
         [SerializeField] private AudioClip pressClip;
 
+        [Header("Touch & Proximity Settings")]
+        [Tooltip("Distance in metres from hand to button centre to trigger a physical press.")]
+        [SerializeField] private float touchRadius = 0.22f;
+
         public UnityEvent onPressed;
         public event Action Pressed;
 
         public bool IsInteractable { get; private set; }
 
         private XRSimpleInteractable _interactable;
+        private XRPokeFilter _pokeFilter;
         private bool _stateChosen;
         private Material _material;
         private bool _hovered;
@@ -50,9 +60,40 @@ namespace FearExposure.Level1
         private void Awake()
         {
             _interactable = GetComponent<XRSimpleInteractable>();
-            _interactable.selectEntered.AddListener(args => HandleSelect());
-            _interactable.hoverEntered.AddListener(args => SetHover(true));
-            _interactable.hoverExited.AddListener(args => SetHover(false));
+            if (_interactable != null)
+            {
+                // Multi-modal listeners: both Select (grip/poke) and Activate (trigger/click)
+                _interactable.selectEntered.AddListener(args => HandleSelect());
+                _interactable.activated.AddListener(args => HandleSelect());
+                _interactable.hoverEntered.AddListener(args => SetHover(true));
+                _interactable.hoverExited.AddListener(args => SetHover(false));
+
+                // Auto-link InteractionManager if unassigned
+                if (_interactable.interactionManager == null)
+                {
+                    var mgr = FindAnyObjectByType<XRInteractionManager>();
+                    if (mgr != null) _interactable.interactionManager = mgr;
+                }
+
+                // Ensure colliders are registered
+                var col = GetComponent<Collider>();
+                if (col != null && !_interactable.colliders.Contains(col))
+                {
+                    _interactable.colliders.Add(col);
+                }
+            }
+
+            // Auto-configure XRPokeFilter for Lab Manual 9 Poke Interactors
+            _pokeFilter = GetComponent<XRPokeFilter>();
+            if (_pokeFilter == null)
+            {
+                _pokeFilter = gameObject.AddComponent<XRPokeFilter>();
+            }
+
+            if (audioSource == null)
+            {
+                audioSource = GetComponent<AudioSource>();
+            }
 
             if (visual != null)
             {
@@ -60,6 +101,7 @@ namespace FearExposure.Level1
                 if (_material != null) visual.sharedMaterial = _material;
             }
             if (pressTarget != null) _restLocalPos = pressTarget.localPosition;
+
             // If a step already switched this button on/off before Awake ran, keep that choice.
             SetInteractable(_stateChosen ? IsInteractable : startInteractable);
         }
@@ -75,6 +117,7 @@ namespace FearExposure.Level1
             _stateChosen = true;
             IsInteractable = on;
             if (_interactable != null) _interactable.enabled = on;
+            if (_pokeFilter != null) _pokeFilter.enabled = on;
             if (!on)
             {
                 _hovered = false;
@@ -92,7 +135,7 @@ namespace FearExposure.Level1
 
         /// <summary>Play Mode testing: right-click this component in the Inspector > "Press (test)".</summary>
         [ContextMenu("Press (test)")]
-        private void PressForTest()
+        public void PressForTest()
         {
             HandleSelect();
         }
@@ -103,21 +146,62 @@ namespace FearExposure.Level1
             RefreshVisual();
         }
 
-        private void HandleSelect()
+        public void HandleSelect()
         {
             if (!IsInteractable || Time.time < _lockUntil) return;
             _lockUntil = Time.time + cooldownSeconds;
-            _pressVisualUntil = Time.time + 0.2f;
+            _pressVisualUntil = Time.time + 0.25f;
 
-            if (audioSource != null && pressClip != null) audioSource.PlayOneShot(pressClip);
-            if (PlayerRig.Instance != null) PlayerRig.Instance.Pulse(0.25f, 0.08f);
+            if (audioSource != null && pressClip != null)
+            {
+                audioSource.PlayOneShot(pressClip);
+            }
+            if (PlayerRig.Instance != null)
+            {
+                PlayerRig.Instance.Pulse(0.35f, 0.12f);
+            }
 
             if (Pressed != null) Pressed();
             if (onPressed != null) onPressed.Invoke();
         }
 
+        // Direct physical collision / trigger detection (hand slamming / body collision)
+        private void OnTriggerEnter(Collider other)
+        {
+            TryHandlePhysicalContact(other.gameObject);
+        }
+
+        private void OnCollisionEnter(Collision collision)
+        {
+            TryHandlePhysicalContact(collision.gameObject);
+        }
+
+        private void TryHandlePhysicalContact(GameObject hitObj)
+        {
+            if (!IsInteractable || Time.time < _lockUntil) return;
+            if (hitObj == null) return;
+
+            // Check if collider belongs to player rig or hands
+            if (hitObj.GetComponentInParent<PlayerRig>() != null ||
+                hitObj.GetComponentInParent<UnityEngine.XR.Interaction.Toolkit.Interactors.XRBaseInteractor>() != null ||
+                hitObj.name.Contains("Hand") || hitObj.name.Contains("Controller") || hitObj.name.Contains("Poke"))
+            {
+                HandleSelect();
+            }
+        }
+
         private void Update()
         {
+            // Continuous proximity touch detection for hand slamming in VR or simulator
+            if (IsInteractable && Time.time >= _lockUntil)
+            {
+                PlayerRig rig = PlayerRig.Instance;
+                if (rig != null && rig.IsWithinReach(transform.position, 0.35f, touchRadius))
+                {
+                    HandleSelect();
+                }
+            }
+
             bool pressedNow = _pressVisualUntil > Time.time;
             if (pressedNow != _wasPressed)
             {

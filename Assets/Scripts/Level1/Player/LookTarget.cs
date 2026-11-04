@@ -27,10 +27,19 @@ namespace FearExposure.Level1
 
         public event Action<LookTarget> Completed;
         public event Action<float> ProgressChanged;
+        public event Action<bool> GazeStateChanged;
 
         public bool IsArmed { get; private set; }
         public bool IsCompleted { get; private set; }
         public float Progress { get; private set; }
+        public float DwellSeconds => dwellSeconds;
+        public float ConeAngle => coneAngle;
+        public float MaxDistance => maxDistance;
+        public ZoneVolume GateZone => gateZone;
+        public float CurrentSeconds => _seconds;
+        public float CurrentAngle { get; private set; }
+        public bool IsCurrentlyGazed { get; private set; }
+        public bool IsInGateZone => gateZone == null || gateZone.PlayerInside;
 
         private float _seconds;
 
@@ -42,6 +51,7 @@ namespace FearExposure.Level1
         public void Disarm()
         {
             IsArmed = false;
+            SetGazed(false);
         }
 
         public void ResetTarget()
@@ -50,20 +60,47 @@ namespace FearExposure.Level1
             IsCompleted = false;
             Progress = 0f;
             _seconds = 0f;
+            SetGazed(false);
         }
 
         private void OnDisable()
         {
             IsArmed = false;
+            SetGazed(false);
+        }
+
+        private void SetGazed(bool gazed)
+        {
+            if (IsCurrentlyGazed != gazed)
+            {
+                IsCurrentlyGazed = gazed;
+                GazeStateChanged?.Invoke(gazed);
+            }
         }
 
         private void Update()
         {
-            if (!IsArmed || IsCompleted) return;
+            if (!IsArmed || IsCompleted)
+            {
+                SetGazed(false);
+                return;
+            }
             PlayerRig rig = PlayerRig.Instance;
-            if (rig == null || rig.Head == null) return;
+            if (rig == null || rig.Head == null)
+            {
+                SetGazed(false);
+                return;
+            }
 
-            if (IsLookedAt(rig)) _seconds += Time.deltaTime;
+            Transform head = rig.Head;
+            Transform aim = aimPoint != null ? aimPoint : transform;
+            Vector3 to = aim.position - head.position;
+            CurrentAngle = Vector3.Angle(head.forward, to);
+
+            bool gazed = IsLookedAt(rig);
+            SetGazed(gazed);
+
+            if (gazed) _seconds += Time.deltaTime;
             else if (resetWhenLookingAway) _seconds = 0f;
             else _seconds = Mathf.Max(0f, _seconds - Time.deltaTime * 0.5f);
 
@@ -71,15 +108,16 @@ namespace FearExposure.Level1
             if (!Mathf.Approximately(p, Progress))
             {
                 Progress = p;
-                if (ProgressChanged != null) ProgressChanged(p);
+                ProgressChanged?.Invoke(p);
             }
 
             if (p >= 1f)
             {
                 IsCompleted = true;
                 IsArmed = false;
-                if (Completed != null) Completed(this);
-                if (onCompleted != null) onCompleted.Invoke();
+                SetGazed(false);
+                Completed?.Invoke(this);
+                onCompleted?.Invoke();
             }
         }
 
